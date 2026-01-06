@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Cricket Stream</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- hls.js -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+
+<header>
+  <h2 id="channelName">Live Stream</h2>
+</header>
+
+<div class="player-container">
+  <video id="video" controls autoplay muted></video>
+
+  <!-- Telegram Popup -->
+  <div id="tgPopup" class="popup">
+    <div class="popup-box">
+      <h3>Join The Action</h3>
+      <p>
+        Get instant updates, match highlights, and exclusive links on our official channel.
+      </p>
+
+      <a href="https://t.me/CriccSojeeb" target="_blank" class="join-btn">
+        Join Channel Now
+      </a>
+
+      <button onclick="closePopup()" class="joined-btn">
+        I've Already Joined
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="bottom">
+  <a href="https://t.me/CriccSojeeb" target="_blank" class="bottom-join">
+    📢 Join Telegram for More Links
+  </a>
+</div>
+
+<script src="channels.js"></script>
+<script src="player.js"></script>
+</body>
+</html>

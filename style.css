@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1530;
+  color: white;
+}
+
+header {
+  background: #12245c;
+  padding: 12px;
+  text-align: center;
+}
+
+.player-container {
+  position: relative;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  background: black;
+}
+
+/* Popup */
+.popup {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background: white;
+  color: black;
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.join-btn {
+  display: block;
+  background: #2aa4f4;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.joined-btn {
+  border: none;
+  background: #eee;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.bottom {
+  text-align: center;
+  margin: 20px;
+}
+
+.bottom-join {
+  background: #0088cc;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
