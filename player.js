@@ -1,22 +1,22 @@
 const video = document.getElementById("video");
-const popup = document.getElementById("tgPopup");
+const popup = document.getElementById("popup");
 
 const params = new URLSearchParams(window.location.search);
-const channelId = params.get("id");
+const id = params.get("id");
 
-const channel = channels[channelId];
+const ch = channels[id];
 
-if (!channel) {
-  alert("Invalid Channel");
+if (!ch) {
+  alert("Channel not found");
 } else {
-  document.getElementById("channelName").innerText = channel.name;
+  document.getElementById("channelName").innerText = ch.name;
 
   if (Hls.isSupported()) {
     const hls = new Hls();
-    hls.loadSource(channel.url);
+    hls.loadSource(ch.url);
     hls.attachMedia(video);
   } else {
-    video.src = channel.url;
+    video.src = ch.url;
   }
 }
 
