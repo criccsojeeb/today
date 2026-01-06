@@ -1,33 +1,50 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b1530;
+  background: #0b1437;
   color: white;
 }
 
-header {
-  background: #12245c;
-  padding: 12px;
-  text-align: center;
+.page {
+  max-width: 1000px;
+  margin: auto;
+  padding: 15px;
 }
 
-.player-container {
+/* Top bar */
+.top-bar {
+  background: #142a6e;
+  padding: 14px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Player card */
+.player-card {
   position: relative;
-  max-width: 900px;
-  margin: 20px auto;
+  margin-top: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  background: black;
 }
 
 video {
   width: 100%;
   height: auto;
-  background: black;
 }
 
-/* Popup */
+/* Popup overlay */
 .popup {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.65);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,40 +53,44 @@ video {
 .popup-box {
   background: white;
   color: black;
+  width: 320px;
   padding: 25px;
-  border-radius: 10px;
-  width: 300px;
   text-align: center;
+  border-radius: 12px;
 }
 
-.join-btn {
+.popup-box h3 {
+  margin-top: 0;
+}
+
+.popup-join {
   display: block;
-  background: #2aa4f4;
+  background: #1da1f2;
   color: white;
   padding: 12px;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
-  margin-bottom: 10px;
+  margin: 12px 0;
 }
 
-.joined-btn {
+.popup-box button {
+  width: 100%;
+  padding: 10px;
   border: none;
   background: #eee;
-  padding: 10px;
-  width: 100%;
   border-radius: 6px;
   cursor: pointer;
 }
 
-.bottom {
+/* Bottom Telegram button */
+.telegram-btn {
+  display: block;
+  margin: 20px auto;
   text-align: center;
-  margin: 20px;
-}
-
-.bottom-join {
   background: #0088cc;
   color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 14px;
+  border-radius: 10px;
   text-decoration: none;
+  width: fit-content;
 }
