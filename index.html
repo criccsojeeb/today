@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Live Cricket Stream</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Live Cricket Stream</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- hls.js -->
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
+
 <body>
 
-<header>
-  <h2 id="channelName">Live Stream</h2>
-</header>
+<div class="page">
 
-<div class="player-container">
-  <video id="video" controls autoplay muted></video>
+  <div class="top-bar">
+    <span id="channelName">Live Stream</span>
+  </div>
 
-  <!-- Telegram Popup -->
-  <div id="tgPopup" class="popup">
-    <div class="popup-box">
-      <h3>Join The Action</h3>
-      <p>
-        Get instant updates, match highlights, and exclusive links on our official channel.
-      </p>
+  <div class="player-card">
+    <video id="video" controls autoplay muted playsinline></video>
 
-      <a href="https://t.me/CriccSojeeb" target="_blank" class="join-btn">
-        Join Channel Now
-      </a>
+    <!-- Telegram Popup -->
+    <div id="popup" class="popup">
+      <div class="popup-box">
+        <h3>Join The Action</h3>
+        <p>
+          Get instant updates, match highlights, and exclusive links on our official channel.
+        </p>
 
-      <button onclick="closePopup()" class="joined-btn">
-        I've Already Joined
-      </button>
+        <a href="https://t.me/CriccSojeeb" target="_blank" class="popup-join">
+          Join Channel Now
+        </a>
+
+        <button onclick="closePopup()">I've Already Joined</button>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="bottom">
-  <a href="https://t.me/CriccSojeeb" target="_blank" class="bottom-join">
-    📢 Join Telegram for More Links
+  <a class="telegram-btn" href="https://t.me/CriccSojeeb" target="_blank">
+    🔔 Join Telegram for More Links
   </a>
+
 </div>
 
 <script src="channels.js"></script>
 <script src="player.js"></script>
+
 </body>
 </html>
